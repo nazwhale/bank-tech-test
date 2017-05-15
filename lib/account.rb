@@ -24,13 +24,13 @@ class Account
   attr_writer :balance
 
   def new_deposit(amount)
-    deposit = Deposit.new(amount)
+    deposit = Deposit.new(amount, self.balance)
     statement.add_transaction(deposit)
     deposit.amount
   end
 
   def new_withdrawal(amount)
-    withdrawal = Withdrawal.new(amount)
+    withdrawal = Withdrawal.new(amount, self.balance)
     statement.add_transaction(withdrawal)
     withdrawal.amount
   end

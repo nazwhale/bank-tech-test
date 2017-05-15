@@ -18,17 +18,4 @@ describe Statement do
     end
   end
 
-  # describe '#print' do
-  #   it 'returns the date and amount of the transaction' do
-  #     statement.add_transaction(deposit)
-  #     statement.print
-  #   end
-  # end
-
-    # it 'prints all transactions' do
-    #   statement.add_transaction(deposit)
-    #   statement.add_transaction(withdrawal)
-    #   expect(STDOUT).to include deposit.amount && withdrawal.amount
-    # end
-  # end
 end

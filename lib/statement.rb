@@ -14,9 +14,9 @@ class Statement
     puts "date || credit || debit || balance"
     history.each do |transaction|
       if transaction.class == Deposit
-        puts "#{transaction.date} || #{transaction.amount} || ||"
+        puts "#{transaction.date} || #{transaction.amount} || || #{transaction.latest_balance}"
       else
-        puts "#{transaction.date} || || #{transaction.amount} ||"
+        puts "#{transaction.date} || || #{transaction.amount} || #{transaction.latest_balance}"
       end
     end
   end
