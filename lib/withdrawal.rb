@@ -1,3 +1,5 @@
+require 'date'
+
 class Withdrawal
 
   attr_reader :date, :amount

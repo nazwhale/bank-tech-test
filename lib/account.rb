@@ -1,4 +1,5 @@
-require 'deposit'
+require_relative 'deposit'
+require_relative 'withdrawal'
 
 class Account
 
@@ -16,6 +17,10 @@ class Account
     self.balance -= new_withdrawal(amount)
   end
 
+  private
+
+  attr_writer :balance
+
   def new_deposit(amount)
     deposit = Deposit.new(amount)
     deposit.amount
@@ -25,9 +30,5 @@ class Account
     withdrawal = Withdrawal.new(amount)
     withdrawal.amount
   end
-
-  private
-
-  attr_writer :balance
 
 end
