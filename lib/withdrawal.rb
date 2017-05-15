@@ -1,4 +1,4 @@
-class Deposit
+class Withdrawal
 
   attr_reader :date, :amount
 
@@ -6,4 +6,5 @@ class Deposit
     @date = Date.today.strftime("%d/%m/%Y")
     @amount = amount
   end
+
 end

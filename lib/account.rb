@@ -1,3 +1,5 @@
+require 'deposit'
+
 class Account
 
   attr_reader :balance
@@ -6,12 +8,22 @@ class Account
     @balance = 0
   end
 
-  def deposit(amount)
-    self.balance += amount
+  def make_deposit(amount)
+    self.balance += new_deposit(amount)
   end
 
-  def withdrawal(amount)
-    self.balance -= amount
+  def make_withdrawal(amount)
+    self.balance -= new_withdrawal(amount)
+  end
+
+  def new_deposit(amount)
+    deposit = Deposit.new(amount)
+    deposit.amount
+  end
+
+  def new_withdrawal(amount)
+    withdrawal = Withdrawal.new(amount)
+    withdrawal.amount
   end
 
   private
