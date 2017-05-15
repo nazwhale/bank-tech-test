@@ -34,5 +34,4 @@ class Account
     statement.add_transaction(withdrawal)
     withdrawal.amount
   end
-
 end

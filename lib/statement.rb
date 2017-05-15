@@ -11,14 +11,24 @@ class Statement
   end
 
   def print
-    puts "date || credit || debit || balance"
-    history.each do |transaction|
-      if transaction.class == Deposit
-        puts "#{transaction.date} || #{transaction.amount} || || #{transaction.latest_balance}"
-      else
-        puts "#{transaction.date} || || #{transaction.amount} || #{transaction.latest_balance}"
-      end
+    statement_header
+    history.reverse.each do |transaction|
+      transaction.class == Deposit ? print_deposit(transaction) : print_withdrawal(transaction)
     end
+  end
+
+  private
+
+  def statement_header
+    puts "date || credit || debit || balance"
+  end
+
+  def print_deposit(transaction)
+    puts "#{transaction.date} || #{transaction.amount} || || #{transaction.latest_balance}"
+  end
+
+  def print_withdrawal(transaction)
+    puts "#{transaction.date} || || #{transaction.amount} || #{transaction.latest_balance}"
   end
 
 end
