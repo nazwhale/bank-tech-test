@@ -10,6 +10,8 @@ class Statement
     history << transaction
   end
 
+  #seperate history and statement
+
   def print
     statement_header
     history.reverse.each do |transaction|

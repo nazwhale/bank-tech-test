@@ -10,4 +10,6 @@ class Deposit
     @latest_balance = balance + amount
   end
 
+  #format date method and call Time in init.
+
 end
