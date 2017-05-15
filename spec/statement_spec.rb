@@ -21,10 +21,9 @@ describe Statement do
   # describe '#print' do
   #   it 'returns the date and amount of the transaction' do
   #     statement.add_transaction(deposit)
-  #     STDOUT.should_receive(:puts).with('13/05/2017 || 10')
-  #     expect(STDOUT).to include deposit.amount && deposit.date
   #     statement.print
   #   end
+  # end
 
     # it 'prints all transactions' do
     #   statement.add_transaction(deposit)

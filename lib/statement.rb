@@ -11,8 +11,17 @@ class Statement
   end
 
   def print
+    puts "date || credit || debit || balance"
     history.each do |transaction|
-      puts "#{transaction.date} || #{transaction.amount}"
+      if transaction.class == Deposit
+        puts "#{transaction.date} || #{transaction.amount} || ||"
+      else
+        puts "#{transaction.date} || || #{transaction.amount} ||"
+      end
     end
   end
+
 end
+
+
+
