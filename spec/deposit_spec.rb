@@ -1,5 +1,4 @@
 require 'deposit'
-require 'date'
 
 describe Deposit do
   subject(:deposit) { described_class.new(5, 100) }

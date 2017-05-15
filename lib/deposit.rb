@@ -9,4 +9,5 @@ class Deposit
     @amount = amount
     @latest_balance = balance + amount
   end
+
 end

@@ -40,4 +40,5 @@ class Account
   def invalid_amount?(amount)
     fail "Must be a positive integer" if amount.negative?
   end
+
 end
