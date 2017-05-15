@@ -16,4 +16,12 @@ describe Account do
     end
   end
 
+  describe "#withdrawal" do
+    it "removes withdrawal from balance" do
+      account.deposit(10)
+      account.withdrawal(3)
+      expect(account.balance).to eq 7
+    end
+  end
+
 end

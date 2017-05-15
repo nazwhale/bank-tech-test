@@ -10,6 +10,10 @@ class Account
     self.balance += amount
   end
 
+  def withdrawal(amount)
+    self.balance -= amount
+  end
+
   private
 
   attr_writer :balance
