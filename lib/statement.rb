@@ -24,11 +24,11 @@ class Statement
   end
 
   def print_deposit(transaction)
-    puts "#{transaction.date} || #{transaction.amount} || || #{transaction.latest_balance}"
+    puts "#{transaction.date} || #{'%.2f' % transaction.amount} || || #{'%.2f' % transaction.latest_balance}"
   end
 
   def print_withdrawal(transaction)
-    puts "#{transaction.date} || || #{transaction.amount} || #{transaction.latest_balance}"
+    puts "#{transaction.date} || || #{'%.2f' % transaction.amount} || #{'%.2f' % transaction.latest_balance}"
   end
 
 end
