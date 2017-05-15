@@ -12,10 +12,12 @@ class Account
   end
 
   def make_deposit(amount)
+    invalid_amount?(amount)
     self.balance += new_deposit(amount)
   end
 
   def make_withdrawal(amount)
+    invalid_amount?(amount)
     self.balance -= new_withdrawal(amount)
   end
 
@@ -33,5 +35,9 @@ class Account
     withdrawal = Withdrawal.new(amount, self.balance)
     statement.add_transaction(withdrawal)
     withdrawal.amount
+  end
+
+  def invalid_amount?(amount)
+    fail "Must be a positive integer" if amount.negative?
   end
 end
