@@ -7,6 +7,10 @@ describe Account do
     it "has a balance of zero" do
       expect(account.balance).to eq 0
     end
+
+    it "has a statement" do
+      expect(account.statement).to be_an_instance_of Statement
+    end
   end
 
   describe "#deposit" do

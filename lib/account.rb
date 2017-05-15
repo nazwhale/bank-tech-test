@@ -1,12 +1,14 @@
 require_relative 'deposit'
 require_relative 'withdrawal'
+require_relative 'statement'
 
 class Account
 
-  attr_reader :balance
+  attr_reader :balance, :statement
 
   def initialize
     @balance = 0
+    @statement = Statement.new
   end
 
   def make_deposit(amount)
@@ -23,11 +25,13 @@ class Account
 
   def new_deposit(amount)
     deposit = Deposit.new(amount)
+    statement.add_action(deposit)
     deposit.amount
   end
 
   def new_withdrawal(amount)
     withdrawal = Withdrawal.new(amount)
+    statement.add_action(withdrawal)
     withdrawal.amount
   end
 
