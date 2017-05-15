@@ -25,13 +25,13 @@ class Account
 
   def new_deposit(amount)
     deposit = Deposit.new(amount)
-    statement.add_action(deposit)
+    statement.add_transaction(deposit)
     deposit.amount
   end
 
   def new_withdrawal(amount)
     withdrawal = Withdrawal.new(amount)
-    statement.add_action(withdrawal)
+    statement.add_transaction(withdrawal)
     withdrawal.amount
   end
 
